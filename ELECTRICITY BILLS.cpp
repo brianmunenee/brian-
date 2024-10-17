@@ -1,10 +1,10 @@
 //program to calculate and display the electricity bill as per the charges
 #include <stdio.h>
 int main (){
-	int customerID ,totalamounttopay,unitconsumed;
-	
+	int customerID ,unitconsumed;	
 	char CustomerName;
-	float chargeperunit ;
+	float chargeperunit,totalamounttopay,surcharge;
+	
 	printf("Enter the customerID:");
 	scanf("%d",&customerID);
 	
@@ -22,25 +22,23 @@ int main (){
 			chargeperunit =1.80;}
 			else if(unitconsumed  >600){
 				chargeperunit = 2.00;}
-				printf("charge per unit %.2f\n",chargeperunit);
 				
-				totalamounttopay=unitconsumed * chargeperunit;
-					printf("the totalbill :%d\n",totalamounttopay);
+				// hoe to calculate totalamounttopay
+				totalamounttopay =unitconsumed * chargeperunit;
 				
+				surcharge =totalamounttopay * 0.15;
 				
-				// how to calculate the totalbill
-				float totalbill =unitconsumed*chargeperunit;
-				if (totalbill >400){
-					 totalamounttopay =totalbill+(totalbill*0.15);
+				if (totalamounttopay >400){
+					totalamounttopay =totalamounttopay +(totalamounttopay * 0.15);
 				}
-					else if(totalamounttopay<=100){
+					 
+					 if(totalamounttopay<100){
 						totalamounttopay=100;
-					}
+					 }
+					 
+					 printf ("chargeperunit :%.2f\n",chargeperunit);
+					 printf("totalamounttopay:%.2f\n",totalamounttopay);
 					
-				
-			
-			
-				
 				return 0;
 }
 				

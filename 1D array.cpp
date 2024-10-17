@@ -1,3 +1,7 @@
+/*
+AUTHOR:BRIAN MUNENE
+REG NO: CT101/G/21785/24
+*/
 #include <stdio.h>
 int main(){
 	int i;
