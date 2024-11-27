@@ -1,0 +1,2 @@
+program to prompt the user to enter a sentence upto 100 characters
+
